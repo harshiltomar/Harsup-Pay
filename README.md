@@ -34,9 +34,27 @@
 - How much complexity is needed
   - Depends on the size of the company. For a startup, whatever helps you move fast w/o tech debt. For a company there are a lot of layers of review to go through
 
+# Hot Paths
+
+- Send money to someone
+- Withdraw balance of merchant
+- Withdraw balance of user back to bank
+- Webhooks from banks to transfer in money
+
+# Techstack
+
+- Frontend and Backend - Next.js (or Backend)
+- Express - Auxilary backends
+- Turborepo
+- Postgres Database
+- Prisma ORM
+- Tailwind
+
 # Architecture
 
 - Making a Payment: ![alt text](image-1.png)
+- Send Money back: ![alt text](image-2.png)
+- Withdrawal of Money: ![alt text](image-4.png)
 
 # Feature Planning
 
