@@ -9,25 +9,20 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@repo/ui": "*",
-    "autoprefixer": "^10.4.19",
+    "@repo/ui": "workspace:*",
     "next": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.1.1",
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
+    "@repo/eslint-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
-    "add": "^2.0.6",
     "eslint": "^8.57.0",
-    "postcss": "^8.4.38",
-    "prefixer": "^0.0.3",
-    "tailwindcss": "^3.4.3",
     "typescript": "^5.3.3"
   }
 }
