@@ -1,81 +1,75 @@
-# Turborepo starter
+# Points
 
-This is an official starter Turborepo.
+- Where to start - Feature planning
+- Design UI/UX
 
-## Using this example
+  - UX - First principles/Copy the biggest website out there
+  - UI - Designer. Today there are tools but havent found any good one
 
-Run the following command:
+- High level Design
 
-```sh
-npx create-turbo@latest
-```
+  - Auth provider
+  - Database
+  - Backend Stack
+  - Frontend stack
+  - Modules you’ll have (common/ui/backend)
+  - Cloud to deploy to
 
-## What's inside?
+- LLD
 
-This Turborepo includes the following packages/apps:
+  - Schema
+  - Route signatures
+  - Frontend Components - debatable
+  - ![alt text](image.png)
 
-### Apps and Packages
+- ER Diagrams -
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+  - We can build these today, but usually not needed unless you’re a very visual person
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+- How to think about features
 
-### Utilities
+  - Usually come from product
+  - If you’re a founder, then just whatever u think is right
 
-This Turborepo has some additional tools already setup for you:
+- How much complexity is needed
+  - Depends on the size of the company. For a startup, whatever helps you move fast w/o tech debt. For a company there are a lot of layers of review to go through
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+# Hot Paths
 
-### Build
+- Send money to someone
+- Withdraw balance of merchant
+- Withdraw balance of user back to bank
+- Webhooks from banks to transfer in money
 
-To build all apps and packages, run the following command:
+# Techstack
 
-```
-cd my-turborepo
-pnpm build
-```
+- Frontend and Backend - Next.js (or Backend)
+- Express - Auxilary backends
+- Turborepo
+- Postgres Database
+- Prisma ORM
+- Tailwind
 
-### Develop
+# Architecture
 
-To develop all apps and packages, run the following command:
+- Making a Payment: ![alt text](image-1.png)
+- Send Money back: ![alt text](image-2.png)
+- Withdrawal of Money: ![alt text](image-4.png)
 
-```
-cd my-turborepo
-pnpm dev
-```
+# Feature Planning
 
-### Remote Caching
+- User login
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+  - Auth (In this case, probably email/phone)
+  - On ramp from bank, off ramp to bank
+  - Support transfers via phone number/name
+  - Support scanning a QR code for transferring to merchants
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
+- Merchant Login
 
-```
-cd my-turborepo
-npx turbo login
-```
+  - Login with google
+  - Generate a QR Code for acceptance
+  - Merchants get an alert/notification on payment
+  - Merchant gets money offramped to bank every 2 days
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- Todo
