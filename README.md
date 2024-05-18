@@ -54,7 +54,7 @@
 
 - Making a Payment: ![alt text](image-1.png)
 - Send Money back: ![alt text](image-2.png)
-- Withdrawal of Money: ![alt text](image-4.png)
+- Withdrawal of Money: ![alt text](image-3.png)
 
 # Feature Planning
 
