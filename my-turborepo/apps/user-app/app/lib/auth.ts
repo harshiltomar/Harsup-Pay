@@ -23,7 +23,7 @@ export const authOptions = {
         },
         password: { label: "Password", type: "password", required: true },
       },
-      // TODO: User credentials type from next-auth
+      // TODO: User credentials type from next-auth: DONE
       async authorize(credentials: any) {
         // Do zod validation, OTP validation here
         const parsedCredentials = credentialsSchema.safeParse(credentials);
@@ -77,7 +77,7 @@ export const authOptions = {
   ],
   secret: process.env.JWT_SECRET || "secret",
   callbacks: {
-    // TODO: can u fix the type here? Using any is bad
+    // TODO: can u fix the type here? Using any is bad: DONE
     async session({ token, session }: { token: JWT; session: Session }) {
       if (session?.user) {
         //@ts-ignore
